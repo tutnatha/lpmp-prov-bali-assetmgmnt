@@ -16,6 +16,7 @@ public class Kegiatan {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String kode;
     @Column(name="nama_kegiatan")
+    private String namaKegiatan;
     private String nama;
     private String keterangan;
 
@@ -23,10 +24,11 @@ public class Kegiatan {
 
     }
 
-    public Kegiatan(String kode, String nama, String keterangan) {
+    public Kegiatan(String kode, String namaKegiatan, String nama, String keterangan) {
         super();
         this.kode = kode;
-        this.nama = nama;
+        this.namaKegiatan = namaKegiatan;
+	this.nama = nama;
         this.keterangan = keterangan;
     }
 
@@ -53,5 +55,12 @@ public class Kegiatan {
     public void setKeterangan(String keterangan) {
         this.keterangan = keterangan;
     }
+    
+    public String getNamaKegiatan() {
+	return namaKegiatan;
+    }
 
+    public void setNamaKegiatan(String namaKegiatan){
+        this.namaKegiatan = namaKegiatan;
+    }
 }

@@ -14,7 +14,7 @@ public class Badroom {
 
     private static final long serialVersionUID = -3009157732242241606L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="no")
     ///private int no;
     private String no;

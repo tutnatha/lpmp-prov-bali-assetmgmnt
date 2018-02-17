@@ -18,7 +18,7 @@ public class DaftarhunianDtl {
 
     private static final long serialVersionUID = -3009157732242241606L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="no_trx")
     ///private int no;
     private String no;          //catatan: pakai String dulu ya..

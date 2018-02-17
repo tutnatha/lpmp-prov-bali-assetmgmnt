@@ -57,13 +57,14 @@ public class Pegawai {
     private String jenjangPendidikan;  //jenjang_pendidikan
     private String jurusanPendidikan;  //jurusan_pendidikan
     private int blnGolGaji;        //bln_gol_gaji
+	private String nama;
 
     public Pegawai() {
 
     }
 
     public Pegawai(String nip,
-                   String name,
+                   String nama,
                    String tempatLahir,
                    Date tglLahir,
                    String pangkat,
@@ -82,12 +83,12 @@ public class Pegawai {
                    int blnPangkatPertama,
                    int thnPensiun,
                    String jenjangPendidikan,
-                   String jurusanPendidikan
-                   ) {
+                   String jurusanPendidikan,
+                   String name) {
 
         super();
         this.nip     = nip;
-        this.name   = name;
+        this.name   = name; //url
         this.tempatLahir    = tempatLahir;
         this.tglLahir       = tglLahir;
         this.pangkat        = pangkat;
@@ -108,7 +109,7 @@ public class Pegawai {
         this.jenjangPendidikan  = jenjangPendidikan  ;
         this.jurusanPendidikan  = jurusanPendidikan  ;
         this.blnGolGaji = blnGolGaji  ;
-
+	this.nama = nama;
     }
 
     public String getNip() {
@@ -208,5 +209,12 @@ public class Pegawai {
     }
 
     public void setJurusanPendidikan(String jurusanPendidikan) {this.jurusanPendidikan  = jurusanPendidikan;}
+	
+	public String getNama(){
+		return nama;
+	}
+	public void setNama(String nama){
+		this.nama = nama;
+	}
+}	
 
-}

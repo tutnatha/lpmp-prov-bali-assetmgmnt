@@ -5,6 +5,7 @@
 //tgl mulai
 //tgl selesai
 //jml peserta
+//kode kegiatan
 
 package com.course.springbootstarter.daftarhunian;
 
@@ -37,13 +38,15 @@ public class DaftarhunianHdr {
     private Date tglSelesai;
     @Column(name="sudah_selesai")
     private String sudahSelesai;
+	private String kodeKegiatan;
 
     public DaftarhunianHdr() {
 
     }
 
     //    public DaftarhunianHdr(int no, String noKamar, String regNo, String isUsed, Date startDate, Date endDate) {
-    public DaftarhunianHdr(String no, String penyelenggara, int jmlPeserta, Date tglMulai, Date tglSelesai, String sudahSelesai) {
+    public DaftarhunianHdr(String no, String penyelenggara, int jmlPeserta, Date tglMulai, Date tglSelesai, 
+	String sudahSelesai, String kodeKegiatan) {
         super();
         this.no = no;
         this.penyelenggara = penyelenggara;
@@ -51,6 +54,7 @@ public class DaftarhunianHdr {
         this.tglMulai = tglMulai;
         this.tglSelesai = tglSelesai;
         this.sudahSelesai = sudahSelesai;
+	this.kodeKegiatan = kodeKegiatan;
     }
 
     //    public int getNo() {
@@ -102,4 +106,12 @@ public class DaftarhunianHdr {
     public void setTglSelesai(Date tglSelesai) {
         this.tglSelesai = tglSelesai;
     }
+
+	public String getKodeKegiatan(){
+		return kodeKegiatan;
+	}
+
+	public void setKodeKegiatan(String kodeKegiatan){
+		this.kodeKegiatan = kodeKegiatan;
+	}
 }
