@@ -8,11 +8,13 @@ package com.course.springbootstarter.penyelenggara;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author myssd
  */
+@Service
 public class PenyelenggaraService {
     @Autowired
     private PenyelenggaraRepository penyelenggaraRepository;
