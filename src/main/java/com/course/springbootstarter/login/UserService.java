@@ -29,6 +29,10 @@ public class UserService {
         return badroomRepository.findOne(s);
     }
 
+    public Users getUser(String username){
+	return badroomRepository.findOne(username);
+    }
+
     public void addUser(Users badroom) {
         badroomRepository.save(badroom);
     }

@@ -11,7 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.course.springbootstarter.entity.Kamar;
+import com.course.springbootstarter.kamar.Kamar;
 
 public class JavaRestClient {
     private HttpHeaders getHeaders() {

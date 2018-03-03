@@ -23,11 +23,16 @@ public class UserController {
     public List<Users> getAllUsers() {
         return userService.getAllUsers();
     }
-
+/*
     @RequestMapping("/users/{no}")
     public Users getUser(@PathVariable String no) {
         int iNo = Integer.valueOf(no);
         return userService.getUser(iNo);
+    }
+*/
+    @RequestMapping("/users/{username}")
+    public Users getUserByName(@PathVariable String username){
+       return userService.getUser(username);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/users")

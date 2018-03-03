@@ -5,6 +5,7 @@ com/course/springbootstarter/entity/UserInfo.class
 com/course/springbootstarter/topic/TopicService.class
 com/course/springbootstarter/daftarhuniandtl/DaftarhunianDtlRepository.class
 com/course/springbootstarter/config/AppAuthenticationEntryPoint.class
+com/course/springbootstarter/login/UserRepository.class
 com/course/springbootstarter/badroom/BadroomController.class
 com/course/springbootstarter/kamar/KamarService.class
 com/course/springbootstarter/badroom/BadroomRepository.class
@@ -15,8 +16,11 @@ com/course/springbootstarter/surattugasdtl/SuratTugasDtlController.class
 com/course/springbootstarter/daftarhunianbad/DaftarhunianbadController.class
 com/course/springbootstarter/daftarhunianbad/DaftarhunianbadRepository.class
 com/course/springbootstarter/CourseApiApp.class
+com/course/springbootstarter/login/UserService.class
+com/course/springbootstarter/login/Users.class
 com/concretepage/dao/IArticleDAO.class
 com/course/springbootstarter/badroom/BadroomService.class
+com/course/springbootstarter/login/UserController.class
 com/course/springbootstarter/lokasitujuan/LokasiTujuanRepository.class
 com/course/springbootstarter/lokasisurat/LokasiSurat.class
 com/course/springbootstarter/topic/Topic.class
@@ -57,6 +61,7 @@ com/course/springbootstarter/lokasisurat/LokasiSuratRepository.class
 com/course/springbootstarter/pegawai/PegawaiService.class
 com/course/springbootstarter/lokasitujuan/LokasiTujuanService.class
 com/course/springbootstarter/config/MyAppUserDetailsService.class
+com/course/springbootstarter/login/IUserServices.class
 com/course/springbootstarter/daftarhuniandtl/DaftarhunianDtlService.class
 com/concretepage/controller/ArticleController.class
 com/course/springbootstarter/daftarhunian/DaftarhunianHdrService.class
