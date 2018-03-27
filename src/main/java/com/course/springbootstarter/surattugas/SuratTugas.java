@@ -15,16 +15,25 @@ public class SuratTugas {
     private static final long serialVersionUID = -3009157732242241606L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="nomor_surat")
     private String nomorSurat;
     @Column(name="isi_surat")
     private String isiSurat;
+    @Column(name="nip_pemberi_tugas")
     private String nipPemberiTugas;
+    @Column(name="txt_hdr")
     private String txtHdr;
+    @Column(name="txt_penutup")
     private String txtPenutup;
+    @Column(name="url_logo_hdr1")
     private String urlLogoHdr1;
+    @Column(name="url_logo_hdr2")
     private String urlLogoHdr2;
+    @Column(name="create_date")
     private Date createDate;
+    @Column(name="create_location")
     private String createLocation;
+    @Column(name="template_modul")
     private int templateModul;
 
     public SuratTugas() {
