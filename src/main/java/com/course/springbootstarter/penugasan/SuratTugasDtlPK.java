@@ -15,7 +15,7 @@ public class SuratTugasDtlPK implements Serializable {
 	@Column(name="nomor_surat")
 	private String nomorSurat;
 
-	@Column(insertable=false, updatable=false)
+	@Column(name="nip", insertable=false, updatable=false)
 	private String nip;
 
 	@Temporal(TemporalType.DATE)

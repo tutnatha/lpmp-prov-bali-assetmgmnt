@@ -3,6 +3,7 @@ package com.course.springbootstarter.penugasan;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="surat_tugas")
-@NamedQuery(name="SuratTugas.findAll", query="SELECT s FROM SuratTugas s")
+@NamedQuery(name="SuratTugas2.findAll", query="SELECT s FROM SuratTugas2 s")
 public class SuratTugas2 implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -19,6 +20,10 @@ public class SuratTugas2 implements Serializable {
 	@Column(name="nomor_surat")
 	private String nomorSurat;
 
+	//bi-directional many-to-one association to SuratTuga
+	@OneToMany(mappedBy="id.nomorSurat")
+	private List<SuratTugasDtl2> suratTugasDtl;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="create_date")
 	private Date createDate;
@@ -71,6 +76,7 @@ public class SuratTugas2 implements Serializable {
 //	private String urlLogoHdr2;
 
 	//bi-directional many-to-one association to LokasiSurat
+	/* Buat Ngetest Aja apakah Query menjadi Benar??? */
 	@ManyToOne
 	@JoinColumn(name="created_location")
 	private LokasiSurat2 lokasiSurat;
@@ -243,6 +249,7 @@ public class SuratTugas2 implements Serializable {
 //		this.urlLogoHdr2 = urlLogoHdr2;
 //	}
 
+/**/	
 	public LokasiSurat2 getLokasiSurat() {
 		return this.lokasiSurat;
 	}
@@ -250,7 +257,7 @@ public class SuratTugas2 implements Serializable {
 	public void setLokasiSurat(LokasiSurat2 lokasiSurat) {
 		this.lokasiSurat = lokasiSurat;
 	}
-
+/**/
 	public Pegawai2 getPegawai() {
 		return this.pegawai;
 	}
@@ -259,4 +266,13 @@ public class SuratTugas2 implements Serializable {
 		this.pegawai = pegawai;
 	}
 
+	public List<SuratTugasDtl2> getSuratTugasDtl() {
+		return suratTugasDtl;
+	}
+
+	public void setSuratTugasDtl(List<SuratTugasDtl2> suratTugasDtl) {
+		this.suratTugasDtl = suratTugasDtl;
+	}
+
+	
 }

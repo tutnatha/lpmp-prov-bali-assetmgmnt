@@ -15,9 +15,9 @@ public class SuratTugas2Controller {
     @Autowired
     private SuratTugas2Service suratTugas2Service;
 
-    @RequestMapping("/surattugass")	//ok
-    public List<SuratTugas2> getAllSuratTugass() {
-        return suratTugas2Service.getAllSuratTugass();
+    @RequestMapping("/surattugas2s")	//ok
+    public List<SuratTugas2> getAllSuratTugas2s() {
+        return suratTugas2Service.getAllSuratTugas2s();
     }
 
 }

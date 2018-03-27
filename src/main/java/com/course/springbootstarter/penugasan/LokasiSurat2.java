@@ -23,9 +23,10 @@ public class LokasiSurat2 implements Serializable {
 	private String namaLokasi;
 
 	//bi-directional many-to-one association to SuratTuga
+/*	*/
 	@OneToMany(mappedBy="lokasiSurat")
 	private List<SuratTugas2> suratTugas;
-
+/* */
 	public LokasiSurat2() {
 	}
 
@@ -45,6 +46,7 @@ public class LokasiSurat2 implements Serializable {
 		this.namaLokasi = namaLokasi;
 	}
 
+	/* Start */
 	public List<SuratTugas2> getSuratTugas() {
 		return this.suratTugas;
 	}
@@ -66,5 +68,5 @@ public class LokasiSurat2 implements Serializable {
 
 		return suratTuga;
 	}
-
+/* End */
 }
