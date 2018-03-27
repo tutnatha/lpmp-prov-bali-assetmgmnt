@@ -2,8 +2,9 @@ package com.course.springbootstarter.daftarhunian.asrama;
 
 import java.util.Date;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 
-
+//@Entity
 public class QueriDfrtHunianHdrDtl {
     //Hdr
 //  @Column(name="no_trx")
@@ -28,7 +29,11 @@ public class QueriDfrtHunianHdrDtl {
   private int seqNo;
 //  @Column(name="no_kamar")
   private int noKamar;
-
+  //take from : daftarhunianbad
+  private String nip;
+  private int lantai;
+  private int jmlTt;
+  
   public QueriDfrtHunianHdrDtl() {}
 
   public QueriDfrtHunianHdrDtl(String no, String penyelenggara, int jmlPeserta, Date tglMulai, Date tglSelesai, String sudahSelesai, String kodeKegiatan, String dtlNo, int seqNo, int noKamar) {
@@ -123,6 +128,30 @@ public class QueriDfrtHunianHdrDtl {
   public void setNoKamar(int noKamar) {
       this.noKamar = noKamar;
   }
+
+	public String getNip() {
+		return nip;
+	}
+	
+	public void setNip(String nip) {
+		this.nip = nip;
+	}
+	
+	public int getLantai() {
+		return lantai;
+	}
+	
+	public void setLantai(int lantai) {
+		this.lantai = lantai;
+	}
+	
+	public int getJmlTt() {
+		return jmlTt;
+	}
+	
+	public void setJmlTt(int jml_tt) {
+		this.jmlTt = jml_tt;
+	}
 
 
 }
