@@ -15,12 +15,17 @@ public class SuratTugasDtl {
     private static final long serialVersionUID = -3009157732242241606L;
     @Id
  //   @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="nomor_surat")
     private String nomorSurat;
     @Column(name="nomor_urut")
     private int nomorUrut;
+    @Column(name="nip")
     private String nip;
+    @Column(name="tujuan_sekolah")
     private String tujuanSekolah;
+    @Column(name="tgl_pemantauan")    
     private Date tglPemantauan;
+    @Column(name="is_valid")
     private String isValid;
 
     public SuratTugasDtl() {

@@ -28,6 +28,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
+import javax.persistence.Column;
 
 @Entity
 @Table(name = "pegawai")
@@ -36,28 +37,50 @@ public class Pegawai {
     private static final long serialVersionUID = -3009157732242241606L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="nip")
     private String nip;     //nip
+    @Column(name="name")
     private String name;    //nama
+    @Column(name="tempat_lahir")
     private String tempatLahir; //tempat_lahir
+    @Column(name="tgl_lahir")
     private Date tglLahir;   //tgl_lahir
+    @Column(name="pangkat")
     private String pangkat;     //pangkat
+    @Column(name="golongan_ruang")
     private String golonganRuang;  //golongan_ruang
+    @Column(name="jabatan")
     private String jabatan;         //jabatan
+    @Column(name="pangkat_tmt")
     private Date pangkatTmt;     //pangkat_tmt
+    @Column(name="thn_mkg")
     private int thnMkg;         //thn_mkg
+    @Column(name="bln_mkg")
     private int blnMkg;         //bln_mkg
+    @Column(name="thn_gol_gaji")
     private int thnGolGaji;    //thn_gol_gaji
+    @Column(name="thn_seluruh")
     private int thnSeluruh;     //thn_seluruh
+    @Column(name="bln_seluruh")
     private int blnSeluruh;     //bln_seluruh
+    @Column(name="tmt_pangkat_pertama")
     private Date tmtPangkatPertama; //tmt_pangkat_pertama
+    @Column(name="gol_pangkat_pertama")
     private String golPangkatPertama; //gol_pangkat_pertama
+    @Column(name="thn_pangkat_pertama")
     private int thnPangkatPertama; //thn_pangkat_pertama
+    @Column(name="bln_pangkat_pertama")
     private int blnPangkatPertama; //bln_pangkat_pertama
+    @Column(name="thn_pensiun")
     private int thnPensiun;         //thn_pensiun
+    @Column(name="jenjang_pendidikan")
     private String jenjangPendidikan;  //jenjang_pendidikan
+    @Column(name="jurusan_pendidikan")
     private String jurusanPendidikan;  //jurusan_pendidikan
+    @Column(name="bln_gol_gaji")
     private int blnGolGaji;        //bln_gol_gaji
-	private String nama;
+    @Column(name="nama")
+    private String nama;
 
     public Pegawai() {
 
