@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;	//ini obatnya
+import com.fasterxml.jackson.annotation.JsonManagedReference	//ini obatnya
 import com.fasterxml.jackson.annotation.JsonBackReference;
 //import com.gigy.model.Person;
 
