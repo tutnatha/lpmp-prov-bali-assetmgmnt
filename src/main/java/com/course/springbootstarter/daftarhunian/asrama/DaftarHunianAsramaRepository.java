@@ -13,4 +13,5 @@ import java.util.List;
 public interface DaftarHunianAsramaRepository extends JpaRepository<DaftarHunianAsrama, Integer>{
 //	Collection<DaftarHunianAsrama> findAll();
 	List<DaftarHunianAsrama> findAll();
+	DaftarHunianAsrama getOne(int id);
 }
