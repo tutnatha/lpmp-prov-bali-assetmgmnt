@@ -46,4 +46,11 @@ public class DaftarHunianAsramaController {
     public List<Room> getAllRoomsUsed(){
     	return ruService.getAllRoomsUsed();
     }
+	
+    //buatkan web service method retrieve per noTrx
+    @RequestMapping("/daftarHunianAsrama/{no}")
+    public DaftarHunianAsrama getDaftarHunianAsrama(@PathVariable String no) {
+        int iNo = Integer.valueOf(no);
+        return dhaService.getDaftarHunianAsrama(iNo);
+    }
 }
