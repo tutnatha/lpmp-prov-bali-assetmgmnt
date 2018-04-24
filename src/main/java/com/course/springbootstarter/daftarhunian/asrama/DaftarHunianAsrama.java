@@ -1,5 +1,6 @@
 package com.course.springbootstarter.daftarhunian.asrama;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
