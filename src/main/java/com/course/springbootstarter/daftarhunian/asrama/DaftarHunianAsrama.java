@@ -25,6 +25,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "daftarhunian_hdr")
 @NamedQuery(name="DaftarHunianAsrama.findAll", query="SELECT d FROM DaftarHunianAsrama d")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class DaftarHunianAsrama implements Serializable{
 	private static final long serialVersionUID = -3009157732242241606L;
     @Id
