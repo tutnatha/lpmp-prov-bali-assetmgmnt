@@ -67,4 +67,12 @@ public class DaftarHunianAsramaService {
         daftarHunianAsramaRepository.findAll().forEach(daftarHunianAsramas::add);
         return daftarHunianAsramas;
     }
+	
+    //method baru : untuk menampilkan Daftar Hunian Asrama
+    //per noTrx
+    public DaftarHunianAsrama getDaftarHunianAsrama(int no) {
+        //return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+//        String s = String.valueOf(no);
+        return daftarHunianAsramaRepository.getOne(no);
+    }
 }
