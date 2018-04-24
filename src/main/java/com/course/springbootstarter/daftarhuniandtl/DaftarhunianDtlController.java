@@ -15,15 +15,20 @@ public class DaftarhunianDtlController {
     @Autowired
     private DaftarhunianDtlService daftarhunianDtlService;
 
+    //tanpa parameter
     @RequestMapping("/daftarhunianDtls")
     public List<DaftarhunianDtl> getAllDaftarhunianDtls() {
         return daftarhunianDtlService.getAllDaftarhunianDtls();
     }
 
+    //filter by : noTrx - parameter
     @RequestMapping("/daftarhunianDtls/{no}")
-    public DaftarhunianDtl getDaftarhunianDtl(@PathVariable String no) {
+    public List<DaftarhunianDtl> getDaftarhunianDtl(@PathVariable String no) {
         int iNo = Integer.valueOf(no);
-        return daftarhunianDtlService.getDaftarhunianDtl(iNo);
+//         return daftarhunianDtlService.getDaftarhunianDtl(iNo);
+        List<DaftarhunianDtl> daftarhunianDtls = new ArrayList<>();
+        daftarhunianDtlRepository.findAll(s).forEach(daftarhunianDtls::add);
+        return daftarhunianDtls;
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/daftarhunianDtls")
