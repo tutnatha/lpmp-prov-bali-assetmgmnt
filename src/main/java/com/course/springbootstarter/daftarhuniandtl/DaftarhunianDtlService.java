@@ -42,63 +42,63 @@ public class DaftarhunianDtlService {
         daftarhunianDtlRepository.delete(s);
     }
 
-    @Override
-    public List<DaftarhunianDtl> findAll(String[] s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public List<DaftarhunianDtl> findAll(String[] s) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public <S extends DaftarhunianDtl> S save(S s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public <S extends DaftarhunianDtl> S save(S s) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public <S extends DaftarhunianDtl> Iterable<S> save(Iterable<S> itrbl) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public <S extends DaftarhunianDtl> Iterable<S> save(Iterable<S> itrbl) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public DaftarhunianDtl findOne(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public DaftarhunianDtl findOne(String id) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public boolean exists(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public boolean exists(String id) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public Iterable<DaftarhunianDtl> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public Iterable<DaftarhunianDtl> findAll() {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public Iterable<DaftarhunianDtl> findAll(Iterable<String> itrbl) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public Iterable<DaftarhunianDtl> findAll(Iterable<String> itrbl) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public long count() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public long count() {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public void delete(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public void delete(String id) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public void delete(DaftarhunianDtl t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public void delete(DaftarhunianDtl t) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public void delete(Iterable<? extends DaftarhunianDtl> itrbl) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public void delete(Iterable<? extends DaftarhunianDtl> itrbl) {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 
-    @Override
-    public void deleteAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//     @Override
+//     public void deleteAll() {
+//         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     }
 }
