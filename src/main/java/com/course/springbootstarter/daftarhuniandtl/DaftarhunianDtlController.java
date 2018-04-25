@@ -25,10 +25,7 @@ public class DaftarhunianDtlController {
     @RequestMapping("/daftarhunianDtls/{no}")
     public List<DaftarhunianDtl> getDaftarhunianDtl(@PathVariable String no) {
         int iNo = Integer.valueOf(no);
-//         return daftarhunianDtlService.getDaftarhunianDtl(iNo);
-        List<DaftarhunianDtl> daftarhunianDtls = new ArrayList<>();
-        daftarhunianDtlRepository.findAll(s).forEach(daftarhunianDtls::add);
-        return daftarhunianDtls;
+        return daftarhunianDtlService.getDaftarhunianDtl(iNo);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/daftarhunianDtls")
