@@ -21,7 +21,7 @@ public class DaftarhunianDtlController {
         return daftarhunianDtlService.getAllDaftarhunianDtls();
     }
 
-    //filter by : noTrx - parameter
+    //dgn parameter: noTrx
     @RequestMapping("/daftarhunianDtls/{no}")
     public List<DaftarhunianDtl> getDaftarhunianDtl(@PathVariable String no) {
         int iNo = Integer.valueOf(no);
