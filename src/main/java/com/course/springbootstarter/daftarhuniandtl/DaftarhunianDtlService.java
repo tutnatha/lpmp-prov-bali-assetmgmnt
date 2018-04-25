@@ -22,9 +22,10 @@ public class DaftarhunianDtlService {
     public List<DaftarhunianDtl> getDaftarhunianDtl(int no) {
         //return daftarhunianDtls.stream().filter(t -> t.getId().equals(id)).findFirst().get();
         String s = String.valueOf(no);
+        String[] as = {s};
 //         return daftarhunianDtlRepository.findOne(s);
         List<DaftarhunianDtl> daftarhunianDtls = new ArrayList<>();
-        daftarhunianDtlRepository.findAll(s).forEach(daftarhunianDtls::add);
+        daftarhunianDtlRepository.findAll(as).forEach(daftarhunianDtls::add);
         return daftarhunianDtls;
     }
 
