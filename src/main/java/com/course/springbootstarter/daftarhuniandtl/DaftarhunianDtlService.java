@@ -11,16 +11,21 @@ public class DaftarhunianDtlService {
     @Autowired
     private DaftarhunianDtlRepository daftarhunianDtlRepository;
 
+//tanpa parameter
     public List<DaftarhunianDtl> getAllDaftarhunianDtls() {
         List<DaftarhunianDtl> daftarhunianDtls = new ArrayList<>();
         daftarhunianDtlRepository.findAll().forEach(daftarhunianDtls::add);
         return daftarhunianDtls;
     }
 
-    public DaftarhunianDtl getDaftarhunianDtl(int no) {
+//filter by : noTrx - parameter
+    public List<DaftarhunianDtl> getDaftarhunianDtl(int no) {
         //return daftarhunianDtls.stream().filter(t -> t.getId().equals(id)).findFirst().get();
         String s = String.valueOf(no);
-        return daftarhunianDtlRepository.findOne(s);
+//         return daftarhunianDtlRepository.findOne(s);
+        List<DaftarhunianDtl> daftarhunianDtls = new ArrayList<>();
+        daftarhunianDtlRepository.findAll(s).forEach(daftarhunianDtls::add);
+        return daftarhunianDtls;
     }
 
     public void addDaftarhunianDtl(DaftarhunianDtl daftarhunianDtl) {
