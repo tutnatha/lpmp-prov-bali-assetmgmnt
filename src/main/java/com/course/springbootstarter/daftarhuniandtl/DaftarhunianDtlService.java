@@ -2,6 +2,7 @@ package com.course.springbootstarter.daftarhuniandtl;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,10 +24,15 @@ public class DaftarhunianDtlService{
     public List<DaftarhunianDtl> getDaftarhunianDtl(int no) {
         //return daftarhunianDtls.stream().filter(t -> t.getId().equals(id)).findFirst().get();
         String s = String.valueOf(no);
-        String[] as = {s};
+//        String[] as = {s};
 //        return daftarhunianDtlRepository.findOne(s);  //ambil banyak row: bukan satu row.
         List<DaftarhunianDtl> daftarhunianDtls = new ArrayList<>();
-        daftarhunianDtlRepository.findByNoTrx(as).forEach(daftarhunianDtls::add);
+//        daftarhunianDtlRepository.findByNoTrx(as).forEach(daftarhunianDtls::add);
+        daftarhunianDtlRepository.findByNoTrx(s).forEach(daftarhunianDtls::add);        
+        //
+        //Query query = createNamedQuery("DaftarhunianDtl.findByNoTrx");
+        //
+        
         return daftarhunianDtls;
     }
 
