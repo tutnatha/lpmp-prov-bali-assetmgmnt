@@ -4,6 +4,6 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 public interface DaftarhunianDtlRepository extends CrudRepository<DaftarhunianDtl, String> {
-  public List<DaftarhunianDtl> findAll(String s);
+  public List<DaftarhunianDtl> findAll(String[] s);
 
 }
