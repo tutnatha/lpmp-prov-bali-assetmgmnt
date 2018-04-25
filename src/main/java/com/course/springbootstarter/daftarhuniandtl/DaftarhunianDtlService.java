@@ -26,7 +26,7 @@ public class DaftarhunianDtlService{
         String[] as = {s};
 //        return daftarhunianDtlRepository.findOne(s);  //ambil banyak row: bukan satu row.
         List<DaftarhunianDtl> daftarhunianDtls = new ArrayList<>();
-        daftarhunianDtlRepository.findAll(as).forEach(daftarhunianDtls::add);
+        daftarhunianDtlRepository.findByNoTrx(as).forEach(daftarhunianDtls::add);
         return daftarhunianDtls;
     }
 

@@ -11,9 +11,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Column;
 import java.util.Date;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
 @Table(name = "daftarhunian_dtl")
+@NamedQueries({
+@NamedQuery(name="DaftarhunianDtl.findAll", 
+        query="SELECT d FROM DaftarhunianDtl d"),
+@NamedQuery(name="DaftarhunianDtl.findByNoTrx", 
+        query="SELECT d FROM DaftarhunianDtl d WHERE d.no = :noTrx")
+})
 public class DaftarhunianDtl {
 
     private static final long serialVersionUID = -3009157732242241606L;

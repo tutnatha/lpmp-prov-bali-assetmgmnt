@@ -7,4 +7,6 @@ public interface DaftarhunianDtlRepository extends CrudRepository<DaftarhunianDt
 
     public List<DaftarhunianDtl> findAll(String[] s);
 //    public Object findAll(String[] s);
+
+    public List<DaftarhunianDtl> findByNoTrx(String[] as);
 }
