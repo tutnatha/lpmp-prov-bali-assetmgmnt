@@ -20,7 +20,7 @@ import javax.persistence.NamedQuery;
 @NamedQuery(name="DaftarhunianDtl.findAll", 
         query="SELECT d FROM DaftarhunianDtl d"),
 @NamedQuery(name="DaftarhunianDtl.findByNoTrx", 
-        query="SELECT d FROM DaftarhunianDtl d WHERE d.no = :no")
+        query="SELECT d FROM DaftarhunianDtl d WHERE d.no = ?#{[1]}")
 })
 public class DaftarhunianDtl {
 
