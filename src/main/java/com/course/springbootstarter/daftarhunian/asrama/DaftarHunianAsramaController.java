@@ -58,7 +58,7 @@ public class DaftarHunianAsramaController {
     }
     
     //buatkan web service method retrieve per noTrx
-    @RequestMapping("/daftarHunianAsrama/{no}")
+    @RequestMapping("/daftarHunianAsrama2/{no}")
     public List<DaftarHunianAsrama> getDaftarHunianAsrama2(@PathVariable String no) {
         int iNo = Integer.valueOf(no);
         DaftarHunianAsrama dha = dhaService.getDaftarHunianAsrama(iNo);
