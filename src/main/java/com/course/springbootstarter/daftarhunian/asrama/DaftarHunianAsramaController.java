@@ -1,5 +1,6 @@
 package com.course.springbootstarter.daftarhunian.asrama;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,5 +55,15 @@ public class DaftarHunianAsramaController {
     public DaftarHunianAsrama getDaftarHunianAsrama(@PathVariable String no) {
         int iNo = Integer.valueOf(no);
         return dhaService.getDaftarHunianAsrama(iNo);
+    }
+    
+    //buatkan web service method retrieve per noTrx
+    @RequestMapping("/daftarHunianAsrama/{no}")
+    public List<DaftarHunianAsrama> getDaftarHunianAsrama2(@PathVariable String no) {
+        int iNo = Integer.valueOf(no);
+        DaftarHunianAsrama dha = dhaService.getDaftarHunianAsrama(iNo);
+        List<DaftarHunianAsrama> listDha = new ArrayList<DaftarHunianAsrama>(); 
+        listDha.add(dha);
+        return listDha;
     }
 }
