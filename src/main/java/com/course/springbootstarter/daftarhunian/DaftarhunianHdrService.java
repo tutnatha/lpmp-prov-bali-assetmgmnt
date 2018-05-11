@@ -27,6 +27,12 @@ public class DaftarhunianHdrService {
         daftarhunianHdrRepository.save(daftarhunianHdr);
     }
 
+    //fungsi baru untuk simpen DaftarHunianHdr: with return value
+    public DaftarhunianHdr addDaftarhunianHdr2(DaftarhunianHdr daftarhunianHdr) {
+        DaftarhunianHdr dftrHunianHdr = daftarhunianHdrRepository.save(daftarhunianHdr);
+        return dftrHunianHdr;
+    }
+    
     void updateDaftarhunianHdr(int no, DaftarhunianHdr daftarhunianHdr) {
         daftarhunianHdrRepository.save(daftarhunianHdr);
     }
