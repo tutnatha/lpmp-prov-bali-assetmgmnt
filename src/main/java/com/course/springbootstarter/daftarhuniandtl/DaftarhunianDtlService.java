@@ -40,6 +40,12 @@ public class DaftarhunianDtlService{
         daftarhunianDtlRepository.save(daftarhunianDtl);
     }
 
+    //method insert baru yg dpt memberikan info return code web services
+    public DaftarhunianDtl addDaftarhunianDtl2(DaftarhunianDtl daftarhunianDtl) {
+        DaftarhunianDtl x = daftarhunianDtlRepository.save(daftarhunianDtl);
+        return x;
+    }
+    
     void updateDaftarhunianDtl(int no, DaftarhunianDtl daftarhunianDtl) {
         daftarhunianDtlRepository.save(daftarhunianDtl);
     }
