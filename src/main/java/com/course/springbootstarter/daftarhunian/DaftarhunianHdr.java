@@ -38,7 +38,8 @@ public class DaftarhunianHdr {
     private Date tglSelesai;
     @Column(name="sudah_selesai")
     private String sudahSelesai;
-    private String kodeKegiatan;
+    @Column(name="kode_kegiatan")
+    private int kodeKegiatan;
 
     public DaftarhunianHdr() {
 
@@ -46,7 +47,8 @@ public class DaftarhunianHdr {
 
     //    public DaftarhunianHdr(int no, String noKamar, String regNo, String isUsed, Date startDate, Date endDate) {
     public DaftarhunianHdr(String no, String penyelenggara, int jmlPeserta, Date tglMulai, Date tglSelesai, 
-	String sudahSelesai, String kodeKegiatan) {
+//	String sudahSelesai, String kodeKegiatan) {
+        String sudahSelesai, int kodeKegiatan) {
         super();
         this.no = no;
         this.penyelenggara = penyelenggara;
@@ -107,11 +109,13 @@ public class DaftarhunianHdr {
         this.tglSelesai = tglSelesai;
     }
 
-	public String getKodeKegiatan(){
+//	public String getKodeKegiatan(){
+    public int getKodeKegiatan(){
 		return kodeKegiatan;
 	}
 
-	public void setKodeKegiatan(String kodeKegiatan){
+//	public void setKodeKegiatan(String kodeKegiatan){
+    public void setKodeKegiatan(int kodeKegiatan){
 		this.kodeKegiatan = kodeKegiatan;
 	}
 }

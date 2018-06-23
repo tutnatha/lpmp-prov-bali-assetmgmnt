@@ -12,6 +12,6 @@ public interface DaftarhunianHdrRepository extends CrudRepository<DaftarhunianHd
 
     //Query kodeKegiatan
     @Query ("select d from DaftarhunianHdr where d.kodeKegiatan = ?1")
-    public List<DaftarhunianHdr> findByKegiatan(String kodeKegiatan);
+    public List<DaftarhunianHdr> findByKegiatan(int kodeKegiatan);
 
 }

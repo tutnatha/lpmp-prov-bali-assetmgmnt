@@ -24,10 +24,10 @@ public class DaftarhunianHdrService {
     }
 
     //Daftar Hunian per Kegiatan
-    public List<DaftarhunianHdr> getDaftarhunianHdr2(String kodeKegiatan) {
+    public List<DaftarhunianHdr> getDaftarhunianHdr2(int kodeKegiatan) {
         //return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-        String s = String.valueOf(kodeKegiatan);
-        return daftarhunianHdrRepository.findByKegiatan(s);
+//        String s = String.valueOf(kodeKegiatan);
+        return daftarhunianHdrRepository.findByKegiatan(kodeKegiatan);
     }
     
     //Daftar Hunian per Penyelenggara
