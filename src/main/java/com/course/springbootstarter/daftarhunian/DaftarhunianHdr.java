@@ -38,7 +38,7 @@ public class DaftarhunianHdr {
     private Date tglSelesai;
     @Column(name="sudah_selesai")
     private String sudahSelesai;
-//    @Column(name="kode_kegiatan")
+    @Column(name="kode_kegiatan")
     private int kodeKegiatan;
 
     public DaftarhunianHdr() {
