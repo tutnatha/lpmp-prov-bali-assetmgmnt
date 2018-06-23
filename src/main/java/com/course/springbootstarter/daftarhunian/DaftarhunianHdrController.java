@@ -28,6 +28,21 @@ public class DaftarhunianHdrController {
         return daftarhunianHdrService.getDaftarhunianHdr(iNo);
     }
 
+    //by Kegiatan
+    @RequestMapping("/daftarhunianHdrs2/{no}")
+    public List<DaftarhunianHdr> getDaftarhunianHdr2(@PathVariable String no) {
+//        int iNo = Integer.valueOf(no);
+        return daftarhunianHdrService.getDaftarhunianHdr2(no);
+    }
+
+    //by Penyelenggara
+    @RequestMapping("/daftarhunianHdrs3/{no}")
+    public List<DaftarhunianHdr> getDaftarhunianHdr3(@PathVariable String no) {
+//        int iNo = Integer.valueOf(no);
+        return daftarhunianHdrService.getDaftarhunianHdr3(no);
+    }
+
+    
     @RequestMapping(method = RequestMethod.POST, value = "/daftarhunianHdrs")
     public void addDaftarhunianHdr(@RequestBody DaftarhunianHdr daftarhunianHdr) {
         daftarhunianHdrService.addDaftarhunianHdr(daftarhunianHdr);

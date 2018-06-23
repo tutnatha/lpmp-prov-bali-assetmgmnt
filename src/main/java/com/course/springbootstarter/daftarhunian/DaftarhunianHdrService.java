@@ -23,6 +23,20 @@ public class DaftarhunianHdrService {
         return daftarhunianHdrRepository.findOne(s);
     }
 
+    //Daftar Hunian per Kegiatan
+    public List<DaftarhunianHdr> getDaftarhunianHdr2(String kodeKegiatan) {
+        //return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+        String s = String.valueOf(kodeKegiatan);
+        return daftarhunianHdrRepository.findByKegiatan(s);
+    }
+    
+    //Daftar Hunian per Penyelenggara
+    public List<DaftarhunianHdr> getDaftarhunianHdr3(String penyelenggara) {
+        //return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+        String s = String.valueOf(penyelenggara);
+        return daftarhunianHdrRepository.findByPenyelenggara(s);
+    }
+    
     public void addDaftarhunianHdr(DaftarhunianHdr daftarhunianHdr) {
         daftarhunianHdrRepository.save(daftarhunianHdr);
     }
