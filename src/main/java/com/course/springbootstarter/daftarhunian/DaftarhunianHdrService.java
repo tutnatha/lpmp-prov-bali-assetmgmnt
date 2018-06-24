@@ -25,8 +25,8 @@ public class DaftarhunianHdrService {
 
     //Daftar Hunian per Kegiatan
     public List<DaftarhunianHdr> getDaftarhunianHdr2(int kodeKegiatan) {
-        //return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-//        String s = String.valueOf(kodeKegiatan);
+//        return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+        String s = String.valueOf(kodeKegiatan);
         return daftarhunianHdrRepository.findByKegiatan(kodeKegiatan);
     }
     

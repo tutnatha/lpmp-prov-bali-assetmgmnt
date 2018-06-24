@@ -7,11 +7,11 @@ import org.springframework.data.repository.CrudRepository;
 public interface DaftarhunianHdrRepository extends CrudRepository<DaftarhunianHdr, String> {
 
     //Query penyelenggara
-    @Query ("select d from DaftarhunianHdr where d.penyelenggara = ?1")     //Simple as that
+    @Query ("select d from DaftarhunianHdr d where d.penyelenggara = ?1")     //Simple as that
     public List<DaftarhunianHdr> findByPenyelenggara(String penyelenggara);
 
     //Query kodeKegiatan
-    @Query ("select e from DaftarhunianHdr where e.kodeKegiatan = ?1")
+    @Query ("select e from DaftarhunianHdr e where e.kodeKegiatan = ?1")
     public List<DaftarhunianHdr> findByKegiatan(int kodeKegiatan);
 
 }

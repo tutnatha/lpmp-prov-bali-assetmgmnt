@@ -41,7 +41,6 @@ public class DaftarhunianHdrController {
 //        int iNo = Integer.valueOf(no);
         return daftarhunianHdrService.getDaftarhunianHdr3(no);
     }
-
     
     @RequestMapping(method = RequestMethod.POST, value = "/daftarhunianHdrs")
     public void addDaftarhunianHdr(@RequestBody DaftarhunianHdr daftarhunianHdr) {
