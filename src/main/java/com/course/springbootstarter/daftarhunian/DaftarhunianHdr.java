@@ -39,16 +39,17 @@ public class DaftarhunianHdr {
     @Column(name="sudah_selesai")
     private String sudahSelesai;
     @Column(name="kode_kegiatan")
-    private int kodeKegiatan;
-
+//    private int kodeKegiatan;     //type data asli di DB nya
+    private String kodeKegiatan;    //type data tipuan coba-cobi
+    
     public DaftarhunianHdr() {
 
     }
 
     //    public DaftarhunianHdr(int no, String noKamar, String regNo, String isUsed, Date startDate, Date endDate) {
     public DaftarhunianHdr(String no, String penyelenggara, int jmlPeserta, Date tglMulai, Date tglSelesai, 
-//	String sudahSelesai, String kodeKegiatan) {
-        String sudahSelesai, int kodeKegiatan) {
+	String sudahSelesai, String kodeKegiatan) {     //balikkan lagi ke String
+//        String sudahSelesai, int kodeKegiatan) {        //int bikin error di @Query
         super();
         this.no = no;
         this.penyelenggara = penyelenggara;
@@ -109,13 +110,13 @@ public class DaftarhunianHdr {
         this.tglSelesai = tglSelesai;
     }
 
-//	public String getKodeKegiatan(){
-    public int getKodeKegiatan(){
+	public String getKodeKegiatan(){    //coba pake String
+//    public int getKodeKegiatan(){         //int bikin bug di @Query
 		return kodeKegiatan;
 	}
 
-//	public void setKodeKegiatan(String kodeKegiatan){
-    public void setKodeKegiatan(int kodeKegiatan){
+	public void setKodeKegiatan(String kodeKegiatan){   //balikkan lagi ke String
+//    public void setKodeKegiatan(int kodeKegiatan){        //int bikin bug di @Query
 		this.kodeKegiatan = kodeKegiatan;
 	}
 }

@@ -31,8 +31,9 @@ public class DaftarhunianHdrController {
     //by Kegiatan
     @RequestMapping("/daftarhunianHdrs2/{no}")
     public List<DaftarhunianHdr> getDaftarhunianHdr2(@PathVariable String no) {
-        int iNo = Integer.valueOf(no);
-        return daftarhunianHdrService.getDaftarhunianHdr2(iNo);
+//        int iNo = Integer.valueOf(no);
+//        return daftarhunianHdrService.getDaftarhunianHdr2(iNo);
+        return daftarhunianHdrService.getDaftarhunianHdr2(no);
     }
 
     //by Penyelenggara
