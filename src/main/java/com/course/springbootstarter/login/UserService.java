@@ -29,10 +29,17 @@ public class UserService {
         return badroomRepository.findOne(s);
     }
 
+    //find: user berdasarkan nama
     public Users getUser(String username){
 	return badroomRepository.findOne(username);
     }
 
+    //getArrayUser
+    public List<Users> getArrayUser(String username){
+//	return badroomRepository.findOne(username);
+        return badroomRepository.findByUsername(username);
+    }
+    
     public void addUser(Users badroom) {
         badroomRepository.save(badroom);
     }

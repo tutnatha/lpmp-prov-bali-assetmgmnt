@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("user")		//auth login user:mukesh/m123
 public class UserController {
-	@Autowired
+    @Autowired
     private UserService userService;
 
     @RequestMapping("/users")
@@ -35,6 +35,12 @@ public class UserController {
        return userService.getUser(username);
     }
 
+    //versi 2 return : array
+    @RequestMapping("/users2/{username}")
+    public List<Users> getUserByName2(@PathVariable String username){
+       return userService.getArrayUser(username);
+    }
+    
     @RequestMapping(method = RequestMethod.POST, value = "/users")
     public void addUser(@RequestBody Users user) {
         userService.addUser(user);

@@ -3,10 +3,18 @@ package com.course.springbootstarter.login;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
+@NamedQueries({
+@NamedQuery(name="Users.findAll", 
+        query="SELECT u FROM Users u"),
+@NamedQuery(name="Users.findByUsername", 
+        query="SELECT u FROM Users u WHERE u.username = ?1")
+})
 public class Users {
 	//username varchar(50)
 	//password varchar(100)
@@ -17,7 +25,7 @@ public class Users {
 	@Id
 	@Column(name="username")
 	private String username;
-	@Column(name="password")	
+	@Column(name="password")
 	private String password;
 	@Column(name="full_name")
 	private String fullName;
