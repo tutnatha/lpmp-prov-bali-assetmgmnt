@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 //import com.course.springbootstarter.badroom.Badroom;
 
 public interface UserRepository extends CrudRepository<Users, String>{
-    @Query ("select d from Users u where u.username = ?1")     //Simple as that
+    @Query ("select u from Users u where u.username = ?1")     //Simple as that
     public List<Users> findByUsername(String username);
 
 }

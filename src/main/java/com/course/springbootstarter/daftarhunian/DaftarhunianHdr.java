@@ -38,7 +38,7 @@ public class DaftarhunianHdr {
     private Date tglSelesai;
     @Column(name="sudah_selesai")
     private String sudahSelesai;
-    @Column(name="kode_kegiatan")
+//    @Column(name="kode_kegiatan") //bikin error: hibernate
 //    private int kodeKegiatan;     //type data asli di DB nya
     private String kodeKegiatan;    //type data tipuan coba-cobi
     
