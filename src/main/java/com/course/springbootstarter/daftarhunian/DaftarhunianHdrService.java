@@ -25,11 +25,11 @@ public class DaftarhunianHdrService {
 
     //Daftar Hunian per Kegiatan
 //    public List<DaftarhunianHdr> getDaftarhunianHdr2(int kodeKegiatan) {
-//    public List<DaftarhunianHdr> getDaftarhunianHdr2(String kodeKegiatan) {
-//        return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-//        String s = String.valueOf(kodeKegiatan);
-//        return daftarhunianHdrRepository.findByKegiatan(kodeKegiatan);
-//    }
+    public List<DaftarhunianHdr> getDaftarhunianHdr2(String kodeKegiatan) {
+//        return daftarhunianHdrs.stream().filter(t -> t.getId().equals(id)).findFirst().get(); //gak pake
+//        String s = String.valueOf(kodeKegiatan);  //gak pake
+        return daftarhunianHdrRepository.findByKegiatan(kodeKegiatan);
+    }
     
     //Daftar Hunian per Penyelenggara
     public List<DaftarhunianHdr> getDaftarhunianHdr3(String penyelenggara) {

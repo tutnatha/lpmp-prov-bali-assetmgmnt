@@ -29,12 +29,12 @@ public class DaftarhunianHdrController {
     }
 
     //by Kegiatan
-//    @RequestMapping("/daftarhunianHdrs2/{no}")
-//    public List<DaftarhunianHdr> getDaftarhunianHdr2(@PathVariable String no) {
-//        int iNo = Integer.valueOf(no);
-//        return daftarhunianHdrService.getDaftarhunianHdr2(iNo);
-//        return daftarhunianHdrService.getDaftarhunianHdr2(no);
-//    }
+    @RequestMapping("/daftarhunianHdrs2/{no}")
+    public List<DaftarhunianHdr> getDaftarhunianHdr2(@PathVariable String no) {
+        int iNo = Integer.valueOf(no);
+//        return daftarhunianHdrService.getDaftarhunianHdr2(iNo);  //remark
+        return daftarhunianHdrService.getDaftarhunianHdr2(no);    //open
+    }
 
     //by Penyelenggara
     @RequestMapping("/daftarhunianHdrs3/{no}")
