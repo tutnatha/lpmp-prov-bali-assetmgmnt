@@ -22,7 +22,7 @@ import java.util.Date;
 @Table(name = "penyelenggara")
 public class Penyelenggara {
     @Id
-    @Column(name="kode")
+    @Column(name="kode", unique = true, nullable = false)
     private String kode;
     @Column(name="nama_instansi")
     private String nama;
