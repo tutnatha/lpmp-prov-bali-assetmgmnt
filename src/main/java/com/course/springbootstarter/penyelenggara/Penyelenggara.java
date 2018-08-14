@@ -21,8 +21,10 @@ import java.util.Date;
 @Entity
 @Table(name = "penyelenggara")
 public class Penyelenggara {
+    private static final long serialVersionUID = -3009157732242241606L;
+    
     @Id
-//     @Column(name="kode", unique = true, nullable = false)
+    @Column(name="kode", unique = true, nullable = false)
     private String kode;
     @Column(name="nama_instansi")
     private String nama;
