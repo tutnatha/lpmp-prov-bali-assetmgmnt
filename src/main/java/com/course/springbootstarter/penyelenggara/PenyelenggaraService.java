@@ -31,6 +31,11 @@ public class PenyelenggaraService {
     }
 
     public void addPenyelenggara(Penyelenggara penyelenggara) {
+        Penyelenggara p = new Penyelenggara();
+        String kode = "Kode";
+        String nama = "Nama";
+        p.setKode(kode);
+        p.setNama(nama);
         penyelenggaraRepository.save(penyelenggara);
     }
 
