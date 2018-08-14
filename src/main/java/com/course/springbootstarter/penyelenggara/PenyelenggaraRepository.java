@@ -6,11 +6,11 @@
 package com.course.springbootstarter.penyelenggara;
 
 import org.springframework.data.repository.CrudRepository;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 /**
  *
  * @author myssd
  */
-public interface PenyelenggaraRepository extends CrudRepository<Penyelenggara, String>{
-    
+//public interface PenyelenggaraRepository extends CrudRepository<Penyelenggara, String>{
+public interface PenyelenggaraRepository extends JpaRepository<Penyelenggara, String>{    
 }
