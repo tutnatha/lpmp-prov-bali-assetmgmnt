@@ -1,7 +1,7 @@
 com/course/springbootstarter/entity/UserInfo.class
 com/course/springbootstarter/penugasan/SuratTugas2Repository.class
-com/course/springbootstarter/config/AppAuthenticationEntryPoint.class
 com/course/springbootstarter/daftarhuniandtl/DaftarhunianDtlRepository.class
+com/course/springbootstarter/config/AppAuthenticationEntryPoint.class
 com/course/springbootstarter/daftarhuniandtl/CustomizedFindAllImpl.class
 com/course/springbootstarter/kamar/KamarService.class
 com/course/springbootstarter/daftarhuniandtl/DaftarhunianDtl.class
@@ -60,11 +60,11 @@ com/course/springbootstarter/penugasan/LokasiTujuan2.class
 com/course/springbootstarter/daftarhunian/asrama/RoomsUsedService.class
 com/course/springbootstarter/badroom/BadroomController.class
 com/course/springbootstarter/badroom/BadroomRepository.class
-com/course/springbootstarter/kegiatan/KegiatanController.class
 com/course/springbootstarter/lokasisurat/LokasiSuratService.class
+com/course/springbootstarter/kegiatan/KegiatanController.class
 com/course/springbootstarter/daftarhunianbad/DaftarhunianbadController.class
-com/course/springbootstarter/daftarhunianbad/DaftarhunianbadRepository.class
 com/course/springbootstarter/penugasan/LokasiTujuan2Service.class
+com/course/springbootstarter/daftarhunianbad/DaftarhunianbadRepository.class
 com/course/springbootstarter/CourseApiApp.class
 com/course/springbootstarter/login/Users.class
 com/course/springbootstarter/login/UserController.class
@@ -93,7 +93,7 @@ com/course/springbootstarter/penugasan/LokasiSurat2.class
 com/course/springbootstarter/penugasan/LokasiSuratRepository2.class
 com/course/springbootstarter/surattugasdtl/SuratTugasDtl.class
 com/course/springbootstarter/daftarhunian/asrama/DaftarHunianAsramaController.class
-com/course/springbootstarter/lokasisurat/LokasiSuratController.class
 com/course/springbootstarter/surattugas/SuratTugasService.class
+com/course/springbootstarter/lokasisurat/LokasiSuratController.class
 com/course/springbootstarter/pegawai/PegawaiService.class
 com/course/springbootstarter/daftarhunian/DaftarhunianHdrService.class

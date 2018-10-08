@@ -53,10 +53,100 @@ public class DaftarhunianDtlController {
         daftarhunianDtlService.updateDaftarhunianDtl(iNo, daftarhunianDtl);
     }
 
+    //test PUT
+    @RequestMapping(value = "/daftarhunianDtls", method = RequestMethod.PUT)
+    public ResponseEntity<?> putDaftarhunianDtls(@RequestBody DaftarhunianDtl body){
+//        FooBarId id = new FooBarId();
+//        id.setEmail(body.getEmail());
+//        id.setName(body.getName());
+        
+        DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
+        myPK.setNoTrx(body.getId().getNoTrx());
+        myPK.setNoKamar(body.getId().getNoKamar());
+
+//        FooBar fooBar = new FooBar();
+//        fooBar.setId(id);
+//        fooBar.setAddress(body.getAddress());
+//        fooBar.setColor(body.getColor());
+//        repo.save(fooBar);
+
+        DaftarhunianDtl dhDtl = new DaftarhunianDtl(); 
+        dhDtl.setId(myPK);
+        dhDtl.setSeqNo(body.getSeqNo());
+//        daftarhunianDtlService.updateDaftarhunianDtl(myPK, dhDtl); //harus by Primary Key
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    
     @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no}")
     public void deleteDaftarhunianDtl(@PathVariable String no) {
         int iNo = Integer.valueOf(no);
         daftarhunianDtlService.deleteDaftarhunianDtl(iNo);
     }
 
+    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx}/{no_kamar}")
+    public void deleteDaftarhunianDtl(@PathVariable String noTrx, @PathVariable String noKamar) {
+        int iNo = Integer.valueOf(noTrx);
+        
+        DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
+        myPK.setNoKamar(noKamar);
+        myPK.setNoTrx(iNo);
+        
+        daftarhunianDtlService.deleteDaftarhunianDtl(myPK);
+    }
+    
+    /*
+    @Autowired
+    private FooBarRepository repo;
+
+    // test FooBar
+    @RequestMapping(value = "/foo", method = RequestMethod.POST)
+    public ResponseEntity<?> postFoo(@RequestBody FooBarDTO body){
+        FooBarId id = new FooBarId();
+        id.setEmail(body.getEmail());
+        id.setName(body.getName());
+
+        FooBar fooBar = new FooBar();
+        fooBar.setId(id);
+        fooBar.setAddress(body.getAddress());
+        fooBar.setColor(body.getColor());
+        repo.save(fooBar);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    //test PUT
+    @RequestMapping(value = "/foo", method = RequestMethod.PUT)
+    public ResponseEntity<?> putFoo(@RequestBody FooBarDTO body){
+        FooBarId id = new FooBarId();
+        id.setEmail(body.getEmail());
+        id.setName(body.getName());
+
+        FooBar fooBar = new FooBar();
+        fooBar.setId(id);
+        fooBar.setAddress(body.getAddress());
+        fooBar.setColor(body.getColor());
+        repo.save(fooBar);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    //test Delete FooBar
+    @RequestMapping(value = "/foo", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteFoo(@RequestBody FooBarIdDTO body){
+        FooBarId id = new FooBarId();
+        id.setEmail(body.getEmail());
+        id.setName(body.getName());
+        repo.delete(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    // test FooBar
+        @RequestMapping(value = "/getFoo", method = RequestMethod.POST)
+        public ResponseEntity<?> getFoo(@RequestBody FooBarIdDTO body){
+            FooBarId id = new FooBarId();
+            id.setEmail(body.getEmail());
+            id.setName(body.getName());
+            FooBar result = repo.findOne(id);
+            return ResponseEntity.ok(result);
+        }
+     */
 }

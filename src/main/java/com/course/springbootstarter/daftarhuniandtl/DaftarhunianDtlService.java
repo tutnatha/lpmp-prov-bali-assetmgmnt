@@ -52,7 +52,12 @@ public class DaftarhunianDtlService{
 
     void deleteDaftarhunianDtl(int no) {
         String s = String.valueOf(no);
-        daftarhunianDtlRepository.delete(s);
+//        daftarhunianDtlRepository.delete(s);
+    }
+
+    void deleteDaftarhunianDtl(DaftarhunianDtl.MyCompositePK no) {
+//        String s = String.valueOf(no);
+        daftarhunianDtlRepository.delete(no);
     }
 
 }
