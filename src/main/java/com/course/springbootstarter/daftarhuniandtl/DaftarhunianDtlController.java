@@ -98,8 +98,8 @@ public class DaftarhunianDtlController {
         int end =0;
         while (match.find()) {
              System.out.println("Found love at index "+ match.start() +" - "+ (match.end()-1));
-             start = match.start();
-             end = (match.end()-1);
+             start = match.start(); //3
+             end = (match.end());   //3
         }
         
         String noTrx = no_trx_no_kamar.substring(0,start-1); //"114";
