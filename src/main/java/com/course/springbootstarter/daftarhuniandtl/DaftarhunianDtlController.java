@@ -95,7 +95,7 @@ public class DaftarhunianDtlController {
         Pattern word = Pattern.compile("|");
         Matcher match = word.matcher(no_trx_no_kamar);
         int start =0;
-        int end;
+        int end =0;
         while (match.find()) {
              System.out.println("Found love at index "+ match.start() +" - "+ (match.end()-1));
              start = match.start();
@@ -104,7 +104,7 @@ public class DaftarhunianDtlController {
         
         String noTrx = no_trx_no_kamar.substring(0,start);
         int iNo = Integer.valueOf(noTrx);
-        String noKamar = no_trx_no_kamar.substring(match.end());
+        String noKamar = no_trx_no_kamar.substring(end+1);
         
         DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
         myPK.setNoKamar(noKamar);
