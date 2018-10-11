@@ -102,9 +102,9 @@ public class DaftarhunianDtlController {
              end = (match.end()-1);
         }
         
-        String noTrx = no_trx_no_kamar.substring(0,start);
+        String noTrx = "114";   //no_trx_no_kamar.substring(0,start-1);
         int iNo = Integer.valueOf(noTrx);
-        String noKamar = no_trx_no_kamar.substring(end+1);
+        String noKamar = "244"; //no_trx_no_kamar.substring(end+1);
         
         DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
         myPK.setNoKamar(noKamar);
