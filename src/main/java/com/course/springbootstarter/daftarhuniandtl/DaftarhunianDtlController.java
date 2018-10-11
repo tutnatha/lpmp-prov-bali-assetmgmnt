@@ -78,15 +78,21 @@ public class DaftarhunianDtlController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
     
-    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no}")
-    public void deleteDaftarhunianDtl(@PathVariable String no) {
-        int iNo = Integer.valueOf(no);
-        daftarhunianDtlService.deleteDaftarhunianDtl(iNo);
-    }
+//    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no}")
+//    public void deleteDaftarhunianDtl(@PathVariable String no) {
+//        int iNo = Integer.valueOf(no);
+//        daftarhunianDtlService.deleteDaftarhunianDtl(iNo);
+//    }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx}/{no_kamar}")
-    public void deleteDaftarhunianDtl(@PathVariable String noTrx, @PathVariable String noKamar) {
+    /**
+     * Method menghapus transaksi detail
+     * @param noTrxnoKamar
+     */
+    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx_no_kamar}")
+    public void deleteDaftarhunianDtl(@PathVariable String noTrx_noKamar) {
+        String noTrx = null;
         int iNo = Integer.valueOf(noTrx);
+        String noKamar = null;
         
         DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
         myPK.setNoKamar(noKamar);
