@@ -91,9 +91,9 @@ public class DaftarhunianDtlController {
      * @param noTrxnoKamar
      */
     @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx_no_kamar}")
-    public void deleteDaftarhunianDtl(@PathVariable String noTrx_noKamar) {
+    public void deleteDaftarhunianDtl(@PathVariable String no_trx_no_kamar) {
         Pattern word = Pattern.compile("|");
-        Matcher match = word.matcher(noTrx_noKamar);
+        Matcher match = word.matcher(no_trx_no_kamar);
         int start =0;
         int end;
         while (match.find()) {
@@ -102,9 +102,9 @@ public class DaftarhunianDtlController {
              end = (match.end()-1);
         }
         
-        String noTrx = noTrx_noKamar.substring(0,start);
+        String noTrx = no_trx_no_kamar.substring(0,start);
         int iNo = Integer.valueOf(noTrx);
-        String noKamar = noTrx_noKamar.substring(match.end());
+        String noKamar = no_trx_no_kamar.substring(match.end());
         
         DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
         myPK.setNoKamar(noKamar);
