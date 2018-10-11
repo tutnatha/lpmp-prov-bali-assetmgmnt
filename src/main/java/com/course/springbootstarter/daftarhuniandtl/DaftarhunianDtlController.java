@@ -1,6 +1,8 @@
 package com.course.springbootstarter.daftarhuniandtl;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -90,18 +92,48 @@ public class DaftarhunianDtlController {
      */
     @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx_no_kamar}")
     public void deleteDaftarhunianDtl(@PathVariable String noTrx_noKamar) {
-        String noTrx = null;
+        Pattern word = Pattern.compile("|");
+        Matcher match = word.matcher(noTrx_noKamar);
+        int start =0;
+        int end;
+        while (match.find()) {
+             System.out.println("Found love at index "+ match.start() +" - "+ (match.end()-1));
+             start = match.start();
+             end = (match.end()-1);
+        }
+        
+        String noTrx = noTrx_noKamar.substring(0,start);
         int iNo = Integer.valueOf(noTrx);
-        String noKamar = null;
+        String noKamar = noTrx_noKamar.substring(match.end());
         
         DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
         myPK.setNoKamar(noKamar);
         myPK.setNoTrx(iNo);
         
         daftarhunianDtlService.deleteDaftarhunianDtl(myPK);
-    }
-    
+    } 
+        
     /*
+    
+String text = "I love you so much";
+String wordToFind = "love";
+Pattern word = Pattern.compile(wordToFind);
+Matcher match = word.matcher(text);
+
+while (match.find()) {
+     System.out.println("Found love at index "+ match.start() +" - "+ (match.end()-1));
+}    
+    
+public class SubStringExample{
+   public static void main(String args[]) {
+       String str= new String("quick brown fox jumps over the lazy dog");
+       System.out.println("Substring starting from index 15:");
+       System.out.println(str.substring(15));
+       System.out.println("Substring starting from index 15 and ending at 20:");
+       System.out.println(str.substring(15, 20));
+   }
+}
+    
     @Autowired
     private FooBarRepository repo;
 
