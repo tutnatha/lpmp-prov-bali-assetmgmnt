@@ -96,7 +96,9 @@ public class DaftarhunianDtlController {
         Matcher match = word.matcher(no_trx_no_kamar);
         int start =0;
         int end =0;
-        while (match.find()) {
+        
+//        while (match.find()) {    //jgn diloop
+        if(match.find()){
              System.out.println("Found love at index "+ match.start() +" - "+ (match.end()-1));
              start = match.start(); //3
              end = (match.end());   //3
