@@ -90,23 +90,30 @@ public class DaftarhunianDtlController {
      * Method menghapus transaksi detail
      * @param noTrxnoKamar
      */
-    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx_no_kamar}")
-    public void deleteDaftarhunianDtl(@PathVariable String no_trx_no_kamar) {
+//    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx_no_kamar}")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/daftarhunianDtls/{no_trx}/{no_kamar}")
+//    public void deleteDaftarhunianDtl(@PathVariable String no_trx_no_kamar){
+    public void deleteDaftarhunianDtl(@PathVariable String no_trx, @PathVariable String no_kamar) {
         Pattern word = Pattern.compile("|");
-        Matcher match = word.matcher(no_trx_no_kamar);
+//        Matcher match = word.matcher(no_trx_no_kamar);    //remark dulu
         int start =0;
         int end =0;
         
+        //Start remark
 //        while (match.find()) {    //jgn diloop
-        if(match.find()){
-             System.out.println("Found love at index "+ match.start() +" - "+ (match.end()-1));
-             start = match.start(); //3
-             end = (match.end());   //3
-        }
+//        if(match.find()){
+//             System.out.println("Found love at index "+ match.start() +" - "+ (match.end()-1));
+//             start = match.start(); //3
+//             end = (match.end());   //3
+//        }
+//        
+//        String noTrx = no_trx_no_kamar.substring(0,start-1); //"114";
+//        int iNo = Integer.valueOf(noTrx);
+//        String noKamar = no_trx_no_kamar.substring(end+1); //"244";
         
-        String noTrx = no_trx_no_kamar.substring(0,start-1); //"114";
+        String noTrx = no_trx;
         int iNo = Integer.valueOf(noTrx);
-        String noKamar = no_trx_no_kamar.substring(end+1); //"244";
+        String noKamar = no_kamar;
         
         DaftarhunianDtl.MyCompositePK myPK = new DaftarhunianDtl.MyCompositePK();
         myPK.setNoKamar(noKamar);
