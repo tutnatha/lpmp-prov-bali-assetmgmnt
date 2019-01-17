@@ -23,6 +23,8 @@ public class Kamar {
     private int jmlTt;
     @Column(name="url_picture")
     private String urlPicture;
+    @Column(name="no_wisma")
+    private String noWisma;
 
     public Kamar() {
 
@@ -68,4 +70,12 @@ public class Kamar {
         this.urlPicture = urlPicture;
     }
 
+//17-jan-2019
+    public String getNoWisma() {
+        return noWisma;
+    }
+
+    public void setNoWisma(String noWisma) {
+        this.noWisma = noWisma;
+    }
 }
