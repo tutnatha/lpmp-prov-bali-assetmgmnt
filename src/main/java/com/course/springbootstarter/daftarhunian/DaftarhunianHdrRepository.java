@@ -16,7 +16,7 @@ public interface DaftarhunianHdrRepository extends CrudRepository<DaftarhunianHd
 
 //20-Jan-19
     //Query nomor trx
-    @Query ("select max(noTrx) from DaftarhunianHdr e where e.userAppId = ?1") //hbQl ya! bukan Sql
+    @Query ("select max(no) from DaftarhunianHdr e where e.userAppId = ?1") //hbQl ya! bukan Sql
     public long findMaxNoTrxByUserAppId(String userAppId);
 //20-Jan-19
 }
