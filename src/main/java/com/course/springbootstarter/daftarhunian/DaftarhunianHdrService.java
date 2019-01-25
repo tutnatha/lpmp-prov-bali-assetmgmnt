@@ -57,4 +57,9 @@ public class DaftarhunianHdrService {
         daftarhunianHdrRepository.delete(s);
     }
 
+//20-Jan-19
+    public long findMaxNoTrxByUserAppId(String userAppId){
+        return daftarhunianHdrRepository.findMaxNoTrxByUserAppId(userAppId);
+    }
+//20-Jan-19
 }

@@ -86,4 +86,11 @@ public class DaftarhunianHdrController {
         daftarhunianHdrService.deleteDaftarhunianHdr(iNo);
     }
 
+//20-Jan-19
+    @RequestMapping(method = RequestMethod.GET, value = "/findMaxNoTrxByUserAppId/{user}")
+    public long findMaxNoTrxByUserAppId(@PathVariable String user) {
+//        int iNo = Integer.valueOf(no);
+        return daftarhunianHdrService.findMaxNoTrxByUserAppId(user);
+    }
+//20-Jan-19
 }

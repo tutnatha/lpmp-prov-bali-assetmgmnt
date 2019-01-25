@@ -42,6 +42,11 @@ public class DaftarhunianHdr {
 //    private int kodeKegiatan;     //type data asli di DB nya
     private String kodeKegiatan;    //type data tipuan coba-cobi
     
+//20-Jan-19
+    @Column(name="user_app_id")
+    private String userAppId;
+//20-Jan-19
+
     public DaftarhunianHdr() {
 
     }
@@ -119,4 +124,14 @@ public class DaftarhunianHdr {
 //    public void setKodeKegiatan(int kodeKegiatan){        //int bikin bug di @Query
 		this.kodeKegiatan = kodeKegiatan;
 	}
+
+//20-Jan-19
+    public String getUserAppId(){
+        return userAppId;
+    }
+
+    public void setUserAppId(String userAppId){
+        this.userAppId = userAppId;
+    }
+//20-Jan-19
 }

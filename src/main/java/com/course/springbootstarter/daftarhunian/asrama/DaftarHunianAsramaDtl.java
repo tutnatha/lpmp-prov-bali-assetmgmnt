@@ -118,5 +118,29 @@ public class DaftarHunianAsramaDtl implements Serializable{
 	public DaftarHunianAsramaDtl(){
 		
 	}
+
+//22-Jan-19
+    @Column(name="nip")
+    private String nip;
+
+    @Column(name="nama")
+    private String nama;
+
+    public String getNip(){
+        return nip;
+    }
 	
+    public void setNip(String nip){
+        this.nip = nip;
+    }
+
+    public String getNama(){
+        return nama;
+    }
+	
+    public void setNama(String nama){
+        this.nama = nama;
+    }
+
+//end 22-Jan-19
 }
