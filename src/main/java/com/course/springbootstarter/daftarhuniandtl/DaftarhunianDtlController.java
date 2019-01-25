@@ -76,6 +76,8 @@ public class DaftarhunianDtlController {
         dhDtl.setId(myPK);
         dhDtl.setSeqNo(body.getSeqNo());
 //        daftarhunianDtlService.updateDaftarhunianDtl(myPK, dhDtl); //harus by Primary Key
+        dhDtl.setNip(body.getNip());
+        dhDtl.setNama(body.getNama());
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
