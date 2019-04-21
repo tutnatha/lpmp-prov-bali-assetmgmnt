@@ -10,3 +10,4 @@ RESTful Api with Spring Boot and MySql
   `topic_id` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8</pre>
+# kangen-water-restfull-svr-mgnt
